@@ -21,7 +21,6 @@ VALUES
 (240024000558, 'Bohemia Manor High School', '2755 Augustine Herman Hwy', 'Chesapeake City, MD', '21915-1408', 4108852075),
 (240024000568, 'Elkton High School', '110 James St', 'Elkton, MD', '21921-4915', 4109965000);
 
-
 -- Create Team Table
 CREATE TABLE Team
 (
