@@ -1,5 +1,5 @@
 -- Create Database
-CREATE DATABASE CecilCountyFootball;
+-- CREATE DATABASE CecilCountyFootball;
 
 -- Create HighSchool Table
 CREATE TABLE HighSchool 
@@ -26,7 +26,6 @@ CREATE TABLE Team
 (
 	teamID int Primary Key,
 	vOrJV varchar(2),
-	numberOfPlayers int,
 	year int,
 	schoolID bigint FOREIGN KEY REFERENCES HighSchool(schoolID)
 );
@@ -35,16 +34,16 @@ CREATE TABLE Team
 	-- teamID numbers: State, County, High School, Team (V Or JV = 1 or 2)
 INSERT INTO Team
 VALUES
-(1111, 'v', 29, 2022, 240024000577),
-(1112, 'jv', 26, 2022, 240024000577),
-(1121, 'v', 29, 2022, 240024000575),
-(1122, 'jv', 25, 2022, 240024000575),
-(1131, 'v', 26, 2022, 240024090469),
-(1132, 'jv', 26, 2022, 240024090469),
-(1141, 'v', 24, 2022, 240024000558),
-(1142, 'jv', 24, 2022, 240024000558),
-(1151, 'v', 25, 2022, 240024000568),
-(1152, 'jv', 24, 2022, 240024000568);
+(1111, 'v', 2022, 240024000577),
+(1112, 'jv', 2022, 240024000577),
+(1121, 'v', 2022, 240024000575),
+(1122, 'jv', 2022, 240024000575),
+(1131, 'v', 2022, 240024090469),
+(1132, 'jv', 2022, 240024090469),
+(1141, 'v', 2022, 240024000558),
+(1142, 'jv', 2022, 240024000558),
+(1151, 'v', 2022, 240024000568),
+(1152, 'jv', 2022, 240024000568);
 
 -- Create Athlete Table
 CREATE TABLE Athlete
@@ -65,8 +64,11 @@ CREATE TABLE Athlete
 	-- studentID numbers: State, County, High School, Freshman Year (last two digits), Alphabetical Ranking by Last Name (three digits, 009 or 076)
 INSERT INTO Athlete
 VALUES
-(11112004, 'John', 'Doe', 21, 'TE', 'Senior', 'TRUE', '3.11', 'jdoe@students.perryville.edu', 1112),
-(11213102, 'John', 'Doe', 13, 'TE', 'Junior', 'FALSE', '1.70',	'jdoe@students.northeast.edu', 1121);
+(11112004, 'Ted', 'Abrams', 21, 'TE', 'Senior', 'TRUE', '3.11', 'tabrams@students.perryville.edu', 1111),
+(11213102, 'Chris', 'White', 13, 'TE', 'Junior', 'FALSE', '1.70',	'cwhite@students.northeast.edu', 1121),
+(11116042, 'Thomas', 'Johnson', 7, 'RB', 'Freshman', 'FALSE', '2.89', 'tjohnson@students.perryville.edu', 1112),
+(11115121, 'Brad', 'Ulman', 14, 'WR', 'Sophomore', 'TRUE', '3.23', 'bulman@students.perryville.edu', 1111),
+(11412008, 'Darth', 'Vader', 3, 'QB', 'Senior', 'FALSE', '0.30', 'dvader@students.elkton.edu', 1151);
 
 -- Create Staff Table
 CREATE TABLE Staff
@@ -100,10 +102,13 @@ CREATE TABLE Class
 	phoneNumber int
 );
 
--- Populate Staff Table
+-- Populate Class Table
 INSERT INTO Class
 VALUES
-(4012, 11112004, 'Pre-Calculus', 84.20, 'John', 'Doe', 'jdoe@perryville.edu', 0000000000);
+(4012, 11112004, 'Pre-Calculus', 84.20, 'John', 'Doe', 'jdoe@perryville.edu', 0000000000),
+(4011, 11213102, 'Algebra 2', 72.50, 'Tom', 'Cruise', 'tcruise@northeast.edu', 0000000000),
+(1001, 11116042, 'Algebra', 68.00, 'Zack', 'Hudson', 'zhudson@perryville.edu', 0000000000),
+(1010, 11112004, 'Art', 58.00, 'Shanon', 'Barks', 'sbarks@perryville.edu', 0000000000);
 
 -- Create Schedule Table
 CREATE TABLE Schedule
