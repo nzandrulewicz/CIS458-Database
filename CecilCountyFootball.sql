@@ -28,7 +28,7 @@ CREATE TABLE Team
 	vOrJV varchar(2),
 	year int,
 	schoolID bigint FOREIGN KEY REFERENCES HighSchool(schoolID)
-);
+);		
 
 -- Populate Team Table
 	-- teamID numbers: State, County, High School, Team (V Or JV = 1 or 2)
@@ -124,7 +124,7 @@ CREATE TABLE Schedule
 	time varchar(7)
 );
 
--- Populate Staff Table
+-- Populate Schedule Table
 INSERT INTO Schedule
 VALUES
 (1, 1, 1111, 'North East High School', '300 Irishtown Rd', 'North East, MD', '21901-4308', 'Friday, November 25, 2022', '6:00pm');
