@@ -65,7 +65,7 @@ CREATE TABLE Athlete
 INSERT INTO Athlete
 VALUES
 (11112004, 'Ted', 'Abrams', 21, 'TE', 'Senior', 'TRUE', '3.11', 'tabrams@students.perryville.edu', 1111),
-(11213102, 'Chris', 'White', 13, 'TE', 'Junior', 'FALSE', '1.70',	'cwhite@students.northeast.edu', 1121),
+(11213102, 'Chris', 'White', 13, 'TE', 'Junior', 'FALSE', '1.70', 'cwhite@students.northeast.edu', 1121),
 (11116042, 'Thomas', 'Johnson', 7, 'RB', 'Freshman', 'FALSE', '2.89', 'tjohnson@students.perryville.edu', 1112),
 (11115121, 'Brad', 'Ulman', 14, 'WR', 'Sophomore', 'TRUE', '3.23', 'bulman@students.perryville.edu', 1111),
 (11412008, 'Darth', 'Vader', 3, 'QB', 'Senior', 'FALSE', '0.30', 'dvader@students.elkton.edu', 1151);
