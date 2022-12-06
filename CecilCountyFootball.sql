@@ -1,7 +1,7 @@
 -- Create Database
 -- CREATE DATABASE CecilCountyFootball;
 
--- Create HighSchool Table
+-- Create HighSchool Table 
 CREATE TABLE HighSchool 
 (
 	schoolID bigint Primary Key,
